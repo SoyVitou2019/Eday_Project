@@ -22,7 +22,7 @@ background: rgba(0,0,0,0);
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-css_file = "E:\Project Practicum\Eday_Project\styles\main.css"
+css_file = "./styles/main.css"
 
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)

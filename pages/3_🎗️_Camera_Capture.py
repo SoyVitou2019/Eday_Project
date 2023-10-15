@@ -39,20 +39,20 @@ st.write("### Video Capture with OpenCV")
 
 frame_placeholder = st.empty()
 
-css_file = "E:\Project Practicum\Eday_Project\styles\main.css"
+css_file = "./styles/main.css"
 
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 def capture_image(img):
-    lengthofImg = len(glob(r"E:\Project Practicum\Eday_Project\capture_img\*jpg"))
+    lengthofImg = len(glob("./capture_img/*jpg"))
     cv2.imwrite(f"./capture_img/captured_image{lengthofImg+1}.jpg", img)  
 
 colum1 , colum2, colum3 = st.columns(3)
 with colum1:
     start_button =st.button("Start", type="secondary", use_container_width=4)
     if start_button:
-        clear_img_path = glob(r'E:\Project Practicum\Eday_Project\capture_img\*jpg')
+        clear_img_path = glob("./capture_img/*jpg")
         for i in range(len(clear_img_path)):
             if os.path.exists(clear_img_path[i]):
                 os.remove(clear_img_path[i])
@@ -88,7 +88,7 @@ from Models.XG_VGG import XG_boosting_prediction
 from PIL import Image
 
 
-uploaded_file = r"E:\Project Practicum\Eday_Project\capture_img\*.jpg"
+uploaded_file = "./capture_img/*jpg"
 img_path = glob(uploaded_file)
 for i in range(len(img_path)):
     image = Image.open(img_path[i])
@@ -107,18 +107,18 @@ for i in range(len(img_path)):
         
         
         
-predicted_file = r"E:\Project Practicum\Eday_Project\Predicted"
+predicted_file = "./Predicted"
 predicted_folder = os.listdir(predicted_file)
 if len(predicted_folder) < 1:
-    os.makedirs(f"E:\Project Practicum\Eday_Project\Predicted\{write_text_predicted[0]}")
+    os.makedirs(f"./Predicted/{write_text_predicted[0]}")
 predicted_folder = os.listdir(predicted_file)
 for i_txt in range(len(write_text_predicted)):
     if write_text_predicted[i_txt] not in predicted_folder:
-        os.makedirs(f"E:\Project Practicum\Eday_Project\Predicted\{write_text_predicted[i_txt]}")
+        os.makedirs(f"./Predicted/{write_text_predicted[i_txt]}")
         predicted_folder = os.listdir(predicted_file)
     for index in range(len(predicted_folder)):
         if write_text_predicted[i_txt] == predicted_folder[index]:
-            img_count_path = glob(f"E:\Project Practicum\Eday_Project\Predicted\{predicted_folder[index]}\*.jpg")
+            img_count_path = glob(f"./Predicted/{predicted_folder[index]}\*.jpg")
             cv2.imwrite(f"./Predicted/{predicted_folder[index]}/{write_text_predicted[i_txt]}{len(img_count_path)+1}.jpg", img_data_predicted[i_txt])
             for re_name_i in range(len(img_count_path)):
                 cv2.imwrite(f"./Predicted/{predicted_folder[index]}/{write_text_predicted[i_txt]}{re_name_i}.jpg", cv2.imread(img_count_path[re_name_i]))

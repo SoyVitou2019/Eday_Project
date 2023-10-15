@@ -31,7 +31,7 @@ def XG_boosting_prediction(input_img):
     x_pred_features = x_pred_features.reshape(x_pred_features.shape[0], -1)
 
     # Load the XGBoost model
-    with open(r"E:\Project Practicum\Eday_Project\Data GMB\GMB5.pkl", "rb") as f:
+    with open("./Data GMB/GMB5.pkl", "rb") as f:
         loaded_model = pickle.load(f)
     all_class = loaded_model.classes_
     prediction = loaded_model.predict(x_pred_features)
