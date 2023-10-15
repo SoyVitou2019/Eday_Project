@@ -1,0 +1,19 @@
+hr {
+ margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+    color:white !important;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #d33682 !important;
+    text-decoration: none;
+}
+
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
