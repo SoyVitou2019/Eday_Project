@@ -1,8 +1,9 @@
-keras==2.11.0
-markdownlit==0.0.7
-numpy==1.21.6
+keras
+markdownlit
+numpy
 opencv_python
-Pillow==9.5.0
-scikit_learn==1.0.2
+Pillow
+scikit_learn
 streamlit
 streamlit-extras
+libtk8.6
