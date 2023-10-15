@@ -4,5 +4,6 @@ numpy
 opencv_python
 Pillow
 scikit_learn
+--upgrade pip
 streamlit==1.27.0
 streamlit-extras
