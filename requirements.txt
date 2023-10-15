@@ -6,4 +6,3 @@ Pillow
 scikit_learn
 streamlit
 streamlit-extras
-libtk8.6
