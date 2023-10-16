@@ -3,14 +3,10 @@ from PIL import Image
 from Models.XG_VGG import XG_boosting_prediction
 # from gradioss import XG_boosting_prediction
 
-    
+st.set_page_config(page_title="Animal Recongition", page_icon="./Image/vitou logo.png")  
     
     
 
-st.set_page_config(
-    page_title="Animal Recognition",
-    page_icon="👾",
-)
 st.sidebar.success("select A page above.")
 
 

@@ -5,7 +5,7 @@ import streamlit as st
 from glob import glob
 import os
 
-
+st.set_page_config(page_title="Animal Recongition", page_icon="./Image/vitou logo.png")
 
 page_bg_img = f"""
 <style>
@@ -59,7 +59,7 @@ with colum1:
 with colum2:
     capture_button = st.button("Capture", type="secondary", use_container_width=4)
 with colum3:
-    stop_button = st.button("Stop", type="secondary", use_container_width=4)
+    stop_button = st.button("Predict", type="secondary", use_container_width=4)
                 
 
 while cap.isOpened():

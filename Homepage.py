@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 from markdownlit import mdlit
 
-
+st.set_page_config(page_title="Animal Recongition", page_icon="./Image/vitou logo.png")
 
 
 page_bg_img = f"""
@@ -53,7 +53,7 @@ st.markdown(css, unsafe_allow_html=True)
 
 
 
-mdlit("""Image recognition, also known as computer vision, is a field of [red]artificial intelligence[/red] (AI)
+mdlit("""Image recognition, also known as computer vision, is a field of [yellow]artificial intelligence[/yellow] (AI)
       that focuses on teaching computers to interpret and understand visual data in the form 
       of images or videos. It involves developing algorithms
 and models that can analyze and extract meaningful information from visual content.

@@ -6,6 +6,9 @@ import shutil
 
 from streamlit_extras.no_default_selectbox import selectbox
 
+
+st.set_page_config(page_title="Animal Recongition", page_icon="./Image/vitou logo.png")
+
 page_bg_img = f"""
 <style>
 

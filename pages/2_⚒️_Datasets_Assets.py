@@ -4,7 +4,7 @@ import glob
 import os
 from streamlit_extras.let_it_rain import rain
 
-
+st.set_page_config(page_title="Animal Recongition", page_icon="./Image/vitou logo.png")
 
 
 rain(
